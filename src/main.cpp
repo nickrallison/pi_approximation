@@ -17,21 +17,15 @@ int circle_points(int root_rad) {
     return points * 4 + 1;
 }
 
-int square_points(int root_rad) {
-    int points = 0;
+int square_points(int rad) {
+    return 4 * (rad * rad + rad) + 1;
+}
 
-    for (int i = 1; i <= root_rad; i+= 4) {
-        points += ceil((root_rad + 1 - i) / (double) i);
-    }
-
-    for (int i = 3; i <= root_rad; i+= 4) {
-        points -= ceil((root_rad + 1 - i) / (double) i);
-    }
-
-    return points;
+double compare(int rad) {
+    return 4 * circle_points(rad*rad) / (double) square_points(rad);
 }
 
 int main() {
-    std::cout << circle_points(9) << std::endl;
+    std::cout << compare(2300)  << std::endl;
     return 1;
 }
