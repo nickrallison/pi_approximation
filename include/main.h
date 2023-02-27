@@ -1,22 +1,22 @@
 
 struct thread_args {
-    unsigned long long thread_num;
-    unsigned long long thread_total;
-    unsigned long long rad;
-    unsigned long long* point_array;
+    long long thread_num;
+    long long thread_total;
+    long long rad;
+    long long* point_array;
 };
 
-unsigned long long circle_points(unsigned long long rad);
+long long circle_points(long long rad);
 
-unsigned long long square_points(unsigned long long rad);
+long long square_points(long long rad);
 
-double compare(unsigned long long rad);
+double compare(long long rad);
 
-void pseudo_thread_process(unsigned long long* output, unsigned long long total_threads, unsigned long long num_thread, unsigned long long rad);
+void pseudo_thread_process(long long* output, long long total_threads, long long num_thread, long long rad);
 
 void thread_process(thread_args* args_array);
 
-unsigned long long circle_points_digamma(unsigned long long rad);
+long long circle_points_digamma(long long rad);
 
 /*
 
