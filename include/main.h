@@ -16,6 +16,8 @@ void pseudo_thread_process(unsigned long long* output, unsigned long long total_
 
 void thread_process(thread_args* args_array);
 
+unsigned long long circle_points_digamma(unsigned long long rad);
+
 /*
 
 int main()
